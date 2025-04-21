@@ -62,11 +62,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Dev.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">1 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+      <span className="font-bold">Hello, I'm Dev </span> a{" "}
+      <span className="font-bold">Software Developer</span> with{" "}
+      <span className="font-bold">1 year</span> of experience. I love work in{" "}
+      <span className="italic">AI/ML, Web Development, and Cloud Technologies</span>. My core focus is {" "}
+      <span className="underline">building end-to-end IT solutions</span>.
       </motion.h1>
 
       <motion.div
@@ -100,7 +100,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/dev-jayswal-mits/"
           target="_blank"
         >
           <BsLinkedin />
@@ -108,7 +108,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/devjayswal"
           target="_blank"
         >
           <FaGithubSquare />

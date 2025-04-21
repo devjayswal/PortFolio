@@ -35,18 +35,18 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Tech Team at Kisaanpe.com",
+    location: "Gwalior, india",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I invited to join the tech team at Kisaanpe.com. I worked on the front-end and back-end of the website. I also worked on the QR onboaring system.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "AI Intern @ FoodNEST(S) technologies",
+    location: "Lucknow, India",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a AI intern at FoodNEST(S) technologies. I worked on Scraping and data analysis. I fine-tuned some of the SLMs and LLMs., i deployed to them in runpod.",
     icon: React.createElement(CgWorkAlt),
     date: "2019 - 2021",
   },

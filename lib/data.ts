@@ -62,24 +62,24 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "SocialEnv",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "It is a social media platform.I build entire it from scratch. It has features like user authentication, post creation, commenting, liking, drag and drop uploading, and more.",
+    tags: ["React", "Vue.js", "Appwrite", "Tailwind", ""],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "Consirage AI",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "It is LLM based Consirage  which can take order from the user  by showing them templates and options, it can order just by asking question i implementated  fucntion calling to  archive that functionlity ",
+    tags: ["venila js", "mongoDB", "express.js", "LLM", "OPENAI","GCP" ],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "OrderFlow Optimizer",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Its a cli program which can handle realtime order scheduling utlizing the functionality of instant scheduling and buffer scheduling. It can handle real time  order , it can batch them and assign to nearest rider.it support multi vendor and multirider without breaking the OTD, maximise the profit and support bulk scheduling ",
+    tags: ["Python", "OSRM", "MongoDB", "TSP", "Algorithm"],
     imageUrl: wordanalyticsImg,
   },
 ] as const;

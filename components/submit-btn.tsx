@@ -1,10 +1,13 @@
+"use client";
+
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
-export default function SubmitBtn() {
-  const { pending } = useFormStatus();
+interface SubmitBtnProps {
+  pending: boolean;
+}
 
+export default function SubmitBtn({ pending }: SubmitBtnProps) {
   return (
     <button
       type="submit"
@@ -16,7 +19,7 @@ export default function SubmitBtn() {
       ) : (
         <>
           Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
         </>
       )}
     </button>

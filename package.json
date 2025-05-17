@@ -12,27 +12,28 @@
     "@react-email/components": "^0.0.36",
     "@react-email/tailwind": "^1.0.4",
     "@types/node": "20.3.2",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
     "clsx": "^1.2.1",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.12.17",
-    "next": "^13.5.11",
-    "postcss": "8.4.24",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hot-toast": "^2.4.1",
+    "next": "^15.4.0-canary.37",
+    "postcss": "^8.5.3",
+    "react": "^19.2.0-canary-4448b187-20250515",
+    "react-dom": "^19.2.0-canary-4448b187-20250515",
+    "react-hot-toast": "^2.5.2",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.5.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "resend": "^4.3.0",
+    "resend": "^4.5.1",
     "sharp": "^0.34.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.5"
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.3"
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@types/react-vertical-timeline-component": "^3.3.3",
+    "@types/scheduler": "^0.26.0"
   }
 }

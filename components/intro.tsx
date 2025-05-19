@@ -2,13 +2,34 @@
 
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, type MotionProps } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import type { HTMLAttributes, RefAttributes } from "react";
+
+
+type MotionSectionType = React.ComponentType<
+  HTMLAttributes<HTMLElement> &
+    MotionProps &
+    RefAttributes<HTMLElement>
+>;
+const Motiondiv = motion.div as MotionSectionType;
+
+const MotionSection = motion
+  .section as MotionSectionType;
+
+const MotionLi = motion.li as MotionSectionType;
+
+
+const Motionspan = motion.span as MotionSectionType;
+
+const Motionh1 = motion.h1 as MotionSectionType;
+
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -22,7 +43,7 @@ export default function Intro() {
     >
       <div className="flex items-center justify-center">
         <div className="relative">
-          <motion.div
+          <Motiondiv
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -39,9 +60,9 @@ export default function Intro() {
               priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
-          </motion.div>
+          </Motiondiv>
 
-          <motion.span
+          <Motionspan
             className="absolute bottom-0 right-0 text-4xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -53,11 +74,11 @@ export default function Intro() {
             }}
           >
             👋
-          </motion.span>
+          </Motionspan>
         </div>
       </div>
 
-      <motion.h1
+      <Motionh1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -67,9 +88,9 @@ export default function Intro() {
       <span className="font-bold">1 year</span> of experience. I love work in{" "}
       <span className="italic">AI/ML, Web Development, and Cloud Technologies</span>. My core focus is {" "}
       <span className="underline">building end-to-end IT solutions</span>.
-      </motion.h1>
+      </Motionh1>
 
-      <motion.div
+      <Motiondiv
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -113,7 +134,7 @@ export default function Intro() {
         >
           <FaGithubSquare />
         </a>
-      </motion.div>
+      </Motiondiv>
     </section>
   );
 }

@@ -10,8 +10,53 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Dev | Personal Portfolio",
-  description: "Dev is a software developer with 1 years of experience.",
+  title: "Dev Jayswal | Personal Portfolio",
+  description: "I am a software developer with 1 year of experience in full-stack, AI/ML, and cloud computing.",
+  keywords: [
+    "Dev Jayswal",
+    "software developer",
+    "portfolio",
+    "AI",
+    "ML",
+    "full-stack",
+    "cloud computing",
+  ],
+   authors: [{ name: "Dev Jayswal", url: "https://devjayswal.com" }],
+    openGraph: {
+    title: "Dev Jayswal | Personal Portfolio",
+    description:
+      "Explore Dev’s work in full-stack, AI/ML, and cloud projects, plus ethical hacking demos.",
+    url: "https://devjayswal.com",
+    siteName: "Dev Jayswal Portfolio",
+    images: [
+      {
+        url: "https://devjayswal.com/profile_photo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Dev Jayswal Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dev Jayswal | Portfolio",
+    description:
+      "A showcase of Dev’s AI/ML, full-stack, and cloud computing projects.",
+    images: ["https://devjayswal.com/profile_photo.jpeg"],
+    creator: "@devjayswal",
+  },
+  // 🏷️ Favicon and touch-icon setup:
+  icons: {
+    icon: "/favicon.ico",                   // the standard 32×32 ICO
+    shortcut: "/favicon.ico",         // PNG fallback for older browsers
+    apple: "/favicon.ico",         // when users save to home screen
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#111827" },
+  ],
 };
 
 export default function RootLayout({
@@ -32,7 +77,6 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-
             <Toaster position="top-right" />
             <ThemeSwitch />
           </ActiveSectionContextProvider>

@@ -2,14 +2,24 @@
 
 import React, { useState } from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
+import { motion , type MotionProps } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import type { HTMLAttributes, RefAttributes } from "react";
+
 
 // …then use <MotionSection> without any “as” prop
 
+type MotionSectionType = React.ComponentType<
+  HTMLAttributes<HTMLElement> &
+    MotionProps &
+    RefAttributes<HTMLElement>
+>;
+
+const MotionSection = motion
+  .section as MotionSectionType;
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -35,7 +45,7 @@ export default function Contact() {
   }
 
   return (
-  <motion.section
+  <MotionSection
     id="contact"
     ref={ref}
     className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
@@ -75,6 +85,6 @@ export default function Contact() {
         />
         <SubmitBtn pending={isLoading} />
       </form>
-    </motion.section>
+    </MotionSection>
   ); 
 }

@@ -21,7 +21,7 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After helping 7 years in my father's business, I decided to pursue my
+        After helping for 7 years in my father's business, I decided to pursue my
         passion for programming. I enrolled in B. Tech. at MITs Gwalior and learned{" "}
         <span className="font-medium">
           about Computer Science & built a strong foundation

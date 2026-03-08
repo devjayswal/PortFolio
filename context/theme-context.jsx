@@ -7,7 +7,7 @@ const ThemeContext = createContext(null);
 export default function ThemeContextProvider({
   children,
 }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -29,9 +29,12 @@ export default function ThemeContextProvider({
 
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    } else {
       setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     }
   }, []);

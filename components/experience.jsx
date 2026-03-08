@@ -31,6 +31,7 @@ export default function Experience() {
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
+              dateClassName="!font-mono !text-xs !tracking-wider !text-gray-500 dark:!text-white/60"
               contentArrowStyle={{
                 borderRight:
                   theme === "light"
@@ -50,6 +51,16 @@ export default function Experience() {
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>
+              {item.highlights?.length > 0 && (
+                <ul className="mt-2 space-y-1 text-sm text-gray-700 dark:text-white/75">
+                  {item.highlights.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex items-start gap-2">
+                      <span className="mt-[0.35rem] h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               {item.certificateUrl && (
                 <a 
                   href={item.certificateUrl} 

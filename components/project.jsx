@@ -22,7 +22,15 @@ export default function Project({
   const opacityValue = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   const CardContent = () => (
-    <section className="bg-gray-100 max-w-[28rem] border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 h-full flex flex-col">
+    <section className="bg-gray-100 max-w-[28rem] border border-black/10 rounded-xl overflow-hidden relative hover:bg-gray-200/80 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/10 h-full flex flex-col">
+      <div className="flex items-center gap-2 border-b border-black/10 px-4 py-2 dark:border-white/10">
+        <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+        <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
+        <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+        <p className="ml-2 truncate font-mono text-[0.65rem] uppercase tracking-wider text-gray-500 dark:text-white/40">
+          ~/projects/{title}
+        </p>
+      </div>
       <div className="relative h-48 w-full overflow-hidden">
          <Image
           src={imageUrl}
@@ -40,7 +48,7 @@ export default function Project({
         <ul className="flex flex-wrap mt-auto gap-2">
           {tags.map((tag, i) => (
             <li
-              className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+              className="bg-black/[0.8] px-3 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-white rounded-md dark:text-white/80"
               key={i}
             >
               {tag}

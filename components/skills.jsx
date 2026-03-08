@@ -5,7 +5,6 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const MotionDiv = motion.div;
 
@@ -35,11 +34,14 @@ export default function Skills() {
       <SectionHeading>My skills</SectionHeading>
       <div className="w-full flex flex-col gap-6">
         {skillsData.map((category, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white/80 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          <div
+            key={index}
+            className="flex flex-col items-center rounded-xl border border-black/10 bg-white/60 p-4 dark:border-white/10 dark:bg-white/5"
+          >
+            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-gray-700 dark:text-white/70">
               {category.title}
             </h3>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-5">
               {category.skills.map((skill, i) => (
                 <MotionDiv
                   key={i}
@@ -53,14 +55,14 @@ export default function Skills() {
                   custom={i}
                 >
                   <div className="flex flex-col items-center gap-2">
-                    <div className="relative h-14 w-14 bg-white dark:bg-white/10 rounded-lg p-2 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center">
+                    <div className="relative flex h-14 w-14 items-center justify-center rounded-md border border-black/10 bg-white p-2 transition-all duration-300 hover:scale-110 dark:border-white/10 dark:bg-white/10">
                       <img
                         src={skill.icon}
                         alt={skill.name}
                         className="h-full w-full object-contain"
                       />
                     </div>
-                    <span className="text-xs font-medium text-gray-700 dark:text-white/70 text-center max-w-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="max-w-[84px] text-center font-mono text-[0.65rem] uppercase tracking-wide text-gray-600 dark:text-white/70">
                       {skill.name}
                     </span>
                   </div>

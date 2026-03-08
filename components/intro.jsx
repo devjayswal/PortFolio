@@ -11,9 +11,6 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 const MotionDiv = motion.div;
-const MotionSection = motion.section;
-const MotionLi = motion.li;
-const MotionSpan = motion.span;
 const MotionH1 = motion.h1;
 
 export default function Intro() {
@@ -38,7 +35,7 @@ export default function Intro() {
           >
             <Image
               src="/profile_photo.jpeg"
-              alt="Ricardo portrait"
+              alt="Dev Jayswal portrait"
               width={192}
               height={192}
               quality={95}
@@ -46,38 +43,32 @@ export default function Intro() {
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </MotionDiv>
-
-          <MotionSpan
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </MotionSpan>
         </div>
       </div>
 
       <MotionH1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.65] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Dev </span> a{" "}
-        <span className="font-bold">techie</span> with{" "}
-        <span className="font-bold">1 year</span> of experience. I love working in{" "}
-        <span className="italic">AI/ML, Web Development, and Cloud Technologies</span>.
-        My core focus is{" "}
-        <span className="underline">building end-to-end IT solutions</span>.
+        <span className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-md border border-black/10 bg-white/70 px-3 py-1 font-mono text-xs text-gray-700 dark:border-white/10 dark:bg-white/5 dark:text-white/70">
+          <span className="text-emerald-600 dark:text-emerald-400">$</span>
+          <span>whoami</span>
+          <span className="text-gray-500 dark:text-white/40">dev-jayswal</span>
+        </span>
+        <span className="font-bold">Software Developer | Full Stack + AI/ML</span>
+        <br />
+        <span className="text-base sm:text-2xl">
+          2+ years experience • .NET • Angular • React • Next.js • Python
+        </span>
+        <br />
+        <span className="text-base sm:text-2xl">
+          Built enterprise modules, AI automation systems, and high-scale scheduling tools.
+        </span>
       </MotionH1>
 
       <MotionDiv
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-base sm:text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -96,14 +87,13 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         
-        <a
+        <Link
+          href="/resumes"
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="https://drive.google.com/file/d/1weKxsLqzruzR4WLdOmSZi5_oBAi3d5hv/view?usp=sharing"
-          target="_blank"
         >
-          Download CV{" "}
+          Open Resumes Folder{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
+        </Link>
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
